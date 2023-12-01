@@ -1,0 +1,38 @@
+#drapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.922);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: fadeout 5s forwards; /* Added "forwards" to keep the final state of the animation */
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 2;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+#drapes h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    animation: spin 3s linear infinite;
+}

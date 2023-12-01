@@ -1,0 +1,162 @@
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+  
+
+}
+
+/* Hide only the vertical scrollbar in webkit-based browsers */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  height: 100vh;
+}
+
+/* Hide the horizontal scrollbar in all browsers */
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#behind-everything {
+  width: 110%;
+  position: fixed;
+  bottom: 14rem;
+  animation: moveAcrossScreen 10s linear infinite;
+}
+
+@keyframes moveAcrossScreen {
+  0% {
+      transform: translateX(0%);
+  }
+  10% {
+      transform: translateX(4%);
+  }
+}
+
+
+.header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.bounceshadow{
+
+  background-color: #333;
+  width: 7rem;
+  border-radius: 50%;
+  filter: blur(11px);
+}
+#box{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  gap: 2rem;
+  background: linear-gradient(to bottom, #3d6cab, #85a6ce);
+}
+
+#info{
+  text-align: center;
+  margin-top: -12rem;
+}
+#buttonbody {
+
+  background: linear-gradient(180deg, #132029, #597485);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 10rem;
+  height: 10rem;
+  padding: 1rem;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 22px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  box-shadow: inset 5px 5px 50px 5px rgba(0, 0, 0, 0.3);
+  animation: arrow-down ease 2s infinite;
+  z-index: 1;
+}
+
+
+@keyframes arrow-down{
+  0%{
+    transform: translateY(0);
+  }
+  30%{
+    transform: translateY(20px);
+  }}
+
+#buttonbody:hover {
+  background: linear-gradient(180deg, #38586d, #65889e);
+  width: 10rem;
+  padding: 1.2rem;
+  box-shadow: inset 5px 5px 50px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+#info-card{
+  display: none;
+  
+}
+
+.main-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin-top: 17rem;
+  text-align: justify;
+}
+
+.place-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem; /* Increase padding to create space around the content */
+  margin: 1rem; /* Add margin to separate the cards */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 320px; /* Set a fixed width for the cards */
+  max-width: 100%; /* Make sure the cards don't exceed the container width */
+}
+
+.place-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+
+.hold{
+  height: 180vh;
+}
+
+.logo{
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 22px;
+  color: white;
+}

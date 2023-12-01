@@ -1,0 +1,19 @@
+POST http://localhost:3001/app/signup
+Content-Type: application/json
+
+{
+    "fullname": "Samira bgi",
+    "username": "sammy",
+    "email": "test2@gmail.com",
+    "password": "pass123467"
+}
+
+
+POST http://localhost:3001/app/login
+Content-Type: application/json
+
+{
+    "username": "ardiy",
+    "password": "ardiy1234"
+
+}
