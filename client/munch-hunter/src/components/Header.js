@@ -44,6 +44,9 @@ const Header = () => {
       <nav className={`nav ${isNavOpen ? 'open' : ''}`}>
         <div id='slimbar'>
         <ul>
+        <li>
+              <Link to="/Home">Home</Link>
+        </li>
             {username ? (
               <li>
                 <Link to="/" onClick={handleLogout}>Logout</Link>
