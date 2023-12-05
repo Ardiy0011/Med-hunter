@@ -23,7 +23,7 @@ const Home = () => {
         </div>
 
         </div>
-
+        <div className='swih'></div>
         <div className='r-image'>
         <div className='left-box'></div>
         <div className='right-box'>
