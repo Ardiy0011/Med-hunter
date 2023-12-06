@@ -1,0 +1,12 @@
+{
+  "name": "servers",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run proxyserver\" \"npm run authenticationserver\"",
+    "proxyserver": "cd proxy && npm start",
+    "authenticationserver": "cd serverbackend && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
