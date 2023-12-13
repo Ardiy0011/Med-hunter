@@ -11,7 +11,7 @@ This is a user friendly emmergency medical center location web application,where
 https://med-hunter.netlify.app/
 
 
-## INSTALATION: 
+## INSTALLATION: 
 
 # Node js Proxy server dependency installation
 * navigate to the directory where the React application is located
@@ -74,6 +74,4 @@ You may also see any lint errors in the console.
 ## RELATED PROJECTS
 
 https://artisan-hound.netlify.app/
-
-## LICESING
 
