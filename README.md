@@ -76,3 +76,15 @@ You may also see any lint errors in the console.
 
 https://artisan-hound.netlify.app/
 
+
+## For non-dev advanced users
+
+* Read this README entirely
+* Clone the repo
+* Play with it
+
+
+# For haters
+
+Sorry, no time for that.
+
