@@ -3,6 +3,7 @@ import '../components/Signup.css';
 import axios from 'axios'; // Import axios with correct syntax
 
 function Signup() {
+  // Signup component that displays the signup form and handles form submission
   const [formData, setFormData] = useState({
     fullname: "",
     username: "",
@@ -10,24 +11,27 @@ function Signup() {
     password: ""
   });
 
-  const handleChange = event => {
+const handleChange = event => {
+    // Update the form data in state when the user types into the form
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async event => {
+const handleSubmit = async event => {
+    // Handle the form submission
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3001/app/signup', formData);
+      const response = await axios.post('https://medhound-auth-server-nodejs.uc.r.appspot.com/app/signup', formData);
       console.log('Form Submitted', response.data);
     } catch (error) {
       console.error('Error submitting form', error);
     }
     window.location = '/login'
-  };
+};
 
-  return (
+return (
+  // Signup component that displays the signup form
     <div className="login-container">
       <div className="login-form">
         <h2>Sign up</h2>

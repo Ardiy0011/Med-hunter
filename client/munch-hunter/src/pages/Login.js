@@ -6,6 +6,7 @@ import { useUserContext } from '../components/UserContext';
 import AlertModal from '../components/Alertmodal';
 
 function Login() {
+  // Login component that displays the login form
   const [formData, setFormData] = useState({
     username: "",
     password: ""
@@ -17,6 +18,7 @@ function Login() {
 
 
   const handleChange = event => {
+    // Update the form data in state when the user types into the form
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -30,19 +32,24 @@ function Login() {
   };
 
   const handleSuccessModalClose = () => {
+    // Close the success modal
     setShowSuccessModal(false);
   };
 
   const handleSubmit = async event => {
+    // Handle the form submission
     event.preventDefault();
     if (!validateForm()) {
       return;
     }
 
     try {
-      const response = await axios.post('http://localhost:3001/app/login', formData);
+      const response = await axios.post('https://medhound-auth-server-nodejs.uc.r.appspot.com/app/login', formData);
 
       if (response.data.username) {
+        // Set the username in the user context
+        // Show the success modal
+        // Redirect to the homepage after 3 seconds using navigate()
         setUsername(response.data.username);
         setShowSuccessModal(true);
         console.log('Logged in as:', response.data.username);

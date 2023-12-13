@@ -51,7 +51,7 @@
     border-radius: 15px;
     color: rgb(255, 255, 255);
     margin: 15px;
-    background-image: url("../img/smartphone-mobile-gps-navigation-illustration-isolated-map-icon-with-pin-gps-flat-and-location-marker-pointer-place-in-isometric-design-concept-of-road-t.webp");
+    background-image: url("../img/header_img.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -77,6 +77,44 @@
     margin: 15px;
     opacity: 0.65;
   }
+
+  section{
+    background-color: rgb(10, 62, 83);
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .about-box{
+    width: 16rem;
+    height: 16rem;
+    border-radius: 15%;
+    color: rgb(255, 255, 255);
+    margin: 15px;
+    background-image: url("../img/logoimage.jpg");
+    background-size: cover;
+    animation: arrow-down ease 2s infinite;
+
+  }
+  
+  @keyframes arrow-down{
+    0%{
+      transform: translateY(0);
+    }
+    30%{
+      transform: translateY(20px);
+    }}
+
+
+
+.pin{
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 
   .slide-up-button {
     position: relative;

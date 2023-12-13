@@ -18,14 +18,14 @@ router.post('/login/', async (req, res) => {
     if (!user) {
       return res.status(400).json({ message: 'User not found' });
     }
-  
+
     // Check the password
     const isPasswordValid = await bcrypt.compare(password, user.password);
-  
+
     if (!isPasswordValid) {
       return res.status(400).json({ message: 'Invalid password' });
     }
-  
+
     res.json({ username: user.username }); // Send the username in the response
   });
 
@@ -55,3 +55,4 @@ router.post('/signup', async (request, response) => {
 });
 
 module.exports = router;
+//exports the router to be used in the server.mjs file

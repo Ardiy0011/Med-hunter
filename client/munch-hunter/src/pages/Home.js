@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+  // Home page component that displays the landing page
 
   return (
     <div>
@@ -56,13 +57,31 @@ const Home = () => {
             <p>With a sleek and intuitive design, our web application ensures a 
                 seamless experience. It's user-friendly, efficient, and designed 
                 for ease of use during high-pressure situations.</p>
+
         </div>
         <div className='lefty-box'></div>
+
+        <div className='swih'></div>
+
         </div>
 
-        
-    </div>
+        <section>
 
+        <div className='about-box'></div>
+
+        <h1 className='pin'>Team</h1>
+  
+
+        <p>
+        A passionate Software Developer and an avid guitarist 
+        who loves playing contemporary rock music on his knees.
+        </p>
+
+
+        </section>
+
+
+            </div>
     </div>
   );
 };

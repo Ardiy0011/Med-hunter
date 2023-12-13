@@ -8,6 +8,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import { UserProvider } from './components/UserContext';
 
 function App() {
+  // App component that displays the header and routes to the body, login, and signup pages
   return (
     <div className='App'>
       <Router>

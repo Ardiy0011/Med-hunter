@@ -4,17 +4,21 @@ import '../components/Login.css';
 import { Link } from 'react-router-dom';
 import { useUserContext } from './UserContext';
 
-
+// Header component that displays the logo and navigation
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const { username, clearUser } = useUserContext();
   const { accesstitle } = useUserContext();
 
   const toggleNav = () => {
+    // Toggle the value of isNavOpen in state
     setIsNavOpen(!isNavOpen);
   };
 
   const handleLogout = () => {
+    // Clear the user context
+    //alert('Logged out')
+     // Alert the user that they have logged out
   setTimeout(()=>{
     <div className="alert-modal">
     <div className="modal-content">

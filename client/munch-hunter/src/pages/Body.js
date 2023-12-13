@@ -10,6 +10,7 @@ import { UserContext } from '../components/UserContext';
 
 
 function Body() {
+  // Body component that displays the main content of the app form the app.js component
   const [data, setData] = useState([]);
   const buttonlabel = 'Hospitals';
   const [loading, setLoading] = useState(false);
@@ -18,7 +19,10 @@ function Body() {
   const [showHeartbeat, setshowHeartbeat] = useState(true)
   const {userLocation, setUserLocation } = useContext(UserContext);
 
+
+  
   useEffect(() => {
+    // display drape component for 3 seconds and then hide it
     const timer = setTimeout(() => {
       setShowIntro(false);
     }, 3000);
@@ -36,6 +40,7 @@ function Body() {
   }
 
   const showcard = () => {
+    // this handles the info card, hides it for about 3 seconds and sets its state to true
     document.getElementById('info-card').style.display = 'flex';
     
   }
@@ -49,21 +54,22 @@ function Body() {
   }
 
   function fetchData() {
+    // this function fetches the data from the api and sets the state of the data to the fetched data
     renderSequence();
     console.log('sequence initiated with button vanished');
     // using string concatenation to join the base url to the geolocation properties
     // incomplete url, the rest of the url is in the proxy code which queries the long and lat below
-    const apiUrl = 'http://localhost:8080/api/places?location=' + userLocation.lat + ',' + userLocation.lng;
+    const apiUrl = 'https://med-hunter.uc.r.appspot.com/api/places?location=' + userLocation.lat + ',' + userLocation.lng;
 
     fetch(apiUrl)
       .then((response) => response.json())
       .then((result) => {
-        console.log('data fetched');
+        console.log('data fetched from api');
         console.log(result);
         if (result.status === 'OK' && Array.isArray(result.results) && result.results.length > 0) {
           setData(result.results);
         } else {
-          setData([{ name: 'No restaurants around you' }]);
+          setData([{ name: 'No hospitals around you' }]);
           console.error('Invalid or empty data from API');
         }
       })

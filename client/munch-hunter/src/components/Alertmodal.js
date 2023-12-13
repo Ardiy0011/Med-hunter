@@ -1,6 +1,8 @@
 import React from 'react';
 import '../components/Login.css';
 
+
+// alert modal
 const AlertModal = ({ message, onClose }) => {
   return (
     <div className="alert-modal">

@@ -1,0 +1,69 @@
+.btn{
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 95px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #FF8E53, #FFB344);
+    padding: 12px;
+    color: white;
+}
+
+.btns{
+    background: linear-gradient(45deg, #53c0ff, #449bff);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 200px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+.btns:hover {
+    background: linear-gradient(45deg, #53c0ff, #449bff);
+    padding: 12px;
+    color: white;
+}
+
+
+.upperbound{
+    width: 100%;
+}
+
+#moreinfo{
+    width: 100%;
+    
+}
+
+.card-body{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.dir{
+    text-decoration: none;
+}
+
+.openstatus{
+    color: #FF6B6B;
+}
