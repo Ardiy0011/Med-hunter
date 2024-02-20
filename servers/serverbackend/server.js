@@ -21,6 +21,6 @@ app.use('/app', routesurl);
 const port = process.env.PORT;
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`authentication server is running on port ${port}`);
 });
